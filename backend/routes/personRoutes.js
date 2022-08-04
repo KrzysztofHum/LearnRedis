@@ -1,0 +1,11 @@
+import express from "express";
+import {
+  creatingPerson,
+  gettingPerson,
+} from "../carController.js/personController.js";
+const personRouter = express.Router();
+
+personRouter.post("/", creatingPerson);
+personRouter.get("/:id", gettingPerson);
+
+export default personRouter;
